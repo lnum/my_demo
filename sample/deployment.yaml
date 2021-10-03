@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: delux-app-deployment
+  labels:
+    app: delux-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: delux-app
+  template:
+    metadata:
+      labels:
+        app: delux-app
+    spec:
+      imagePullSecrets:
+      - name: my-key
+      containers:
+      - name: delux-app
+        image: 99199586988.dkr.ecr.ap-southeast-1.amazonaws.com/testpro:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 5000

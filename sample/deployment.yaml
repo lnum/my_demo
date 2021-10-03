@@ -18,7 +18,7 @@ spec:
       - name: my-key
       containers:
       - name: delux-app
-        image: 99199586988.dkr.ecr.ap-southeast-1.amazonaws.com/testpro:latest
+        image: 597086837351.dkr.ecr.us-east-2.amazonaws.com/delux_private:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 5000
